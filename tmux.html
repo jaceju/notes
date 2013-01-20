@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h2>tmux 指令</h2>
+<table width="100%" border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
+    <tbody>
+        <tr>
+            <td>tmux ls</td>
+            <td>列出主機上所有的 session</td>
+        </tr>
+        <tr>
+            <td>tmux a -t session-id</td>
+            <td>將背景的 session 叫回，a 代表 attach</td>
+        </tr>
+    </tbody>
+</table>
+<h2>tmux 快速鍵</h2>
+<table width="100%" border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
+    <tbody>
+        <tr>
+            <td colspan="2"> Ctrl+b </td>
+            <td>激活控制台；此時以下按鍵生效</td>
+        </tr>
+        <tr>
+            <td rowspan="9">系統操作</td>
+            <td> ? </td>
+            <td>列出所有快捷鍵；按 q 返回</td>
+        </tr>
+        <tr>
+            <td> d </td>
+            <td>將目前的 session 丟到背景去；這樣可以暫時返回 shell 界面 
+        </td></tr>
+        <tr>
+            <td> D </td>
+            <td>選擇要脫離的 session ；在同時開啟了多個 session 時使用</td>
+        </tr>
+        <tr>
+            <td> Ctrl+z </td>
+            <td>掛起當前 session 
+        </td></tr>
+        <tr>
+            <td> r </td>
+            <td>強制重繪未脫離的 session 
+        </td></tr>
+        <tr>
+            <td> s </td>
+            <td>選擇並切換 session ；在同時開啟了多個 session 時使用</td>
+        </tr>
+        <tr>
+            <td> : </td>
+            <td>進入命令行模式；此時可以輸入支持的命令，例如 kill-server 可以關閉服務器</td>
+        </tr>
+        <tr>
+            <td> [ </td>
+            <td>進入複製模式；此時的操作與 vi/emacs 相同，按 q 或 esc 退出</td>
+        </tr>
+        <tr>
+            <td> ~ </td>
+            <td>列出提示信息緩存；其中包含了之前 tmux 返回的各種提示信息</td>
+        </tr>
+        <tr>
+            <td rowspan="10">session 操作</td>
+            <td> c </td>
+            <td>創建新視窗</td>
+        </tr>
+        <tr>
+            <td>&amp; </td>
+            <td>關閉當前視窗</td>
+        </tr>
+        <tr>
+            <td> 數字鍵 </td>
+            <td>切換至指定視窗</td>
+        </tr>
+        <tr>
+            <td> p </td>
+            <td>切換至上一個視窗</td>
+        </tr>
+        <tr>
+            <td> n </td>
+            <td>切換至下一個視窗</td>
+        </tr>
+        <tr>
+            <td> l </td>
+            <td>在前後兩個視窗間互相切換</td>
+        </tr>
+        <tr>
+            <td> w </td>
+            <td>通過視窗列表切換視窗</td>
+        </tr>
+        <tr>
+            <td> , </td>
+            <td>重命名當前視窗；這樣便於識別</td>
+        </tr>
+        <tr>
+            <td> . </td>
+            <td>修改當前視窗編號；相當於窗口重新排序</td>
+        </tr>
+        <tr>
+            <td> f </td>
+            <td>在所有視窗中尋找指定文字</td>
+        </tr>
+        <tr>
+            <td rowspan="14">面板操作</td>
+            <td> &quot;</td>
+            <td>將當前面板平分為上下兩塊 (垂直分割)</td>
+        </tr>
+        <tr>
+            <td> % </td>
+            <td>將當前面板平分為左右兩塊 (水平分割)</td>
+        </tr>
+        <tr>
+            <td> x </td>
+            <td>關閉當前面板</td>
+        </tr>
+        <tr>
+            <td> ! </td>
+            <td>將當前面板置於新窗口；即新建一個窗口，其中僅包含當前面板</td>
+        </tr>
+        <tr>
+            <td> Ctrl+方向鍵 </td>
+            <td>以 1 個單元格為單位移動邊緣以調整當前面板大小</td>
+        </tr>
+        <tr>
+            <td> Alt+方向鍵 </td>
+            <td>以 5 個單元格為單位移動邊緣以調整當前面板大小</td>
+        </tr>
+        <tr>
+            <td> space </td>
+            <td>重新調整面板配置；依次包括 even-horizontal 、 even-vertical 、 main-horizontal 、 main-vertical 、 tiled</td>
+        </tr>
+        <tr>
+            <td> q </td>
+            <td>顯示面板編號</td>
+        </tr>
+        <tr>
+            <td> o </td>
+            <td>在當前窗口中選擇下一面板</td>
+        </tr>
+        <tr>
+            <td> 方向鍵 </td>
+            <td>移動光標以選擇面板</td>
+        </tr>
+        <tr>
+            <td> { </td>
+            <td>向前置換當前面板</td>
+        </tr>
+        <tr>
+            <td> } </td>
+            <td>向後置換當前面板</td>
+        </tr>
+        <tr>
+            <td> Alt+o </td>
+            <td>逆時針旋轉當前窗口的面板</td>
+        </tr>
+        <tr>
+            <td> Ctrl+o </td>
+            <td>順時針旋轉當前窗口的面板</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
